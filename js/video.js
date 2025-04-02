@@ -1,5 +1,6 @@
 var video;
 var isMuted = false;
+var firstTime = true;
 
 
 window.addEventListener("load", function() {
@@ -13,7 +14,10 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
 	volume = document.querySelector("#volume");
-	volume.innerHTML = "100%";
+	if (firstTime){
+		volume.innerHTML = "100%";
+		firstTime = false;
+	}
 	
 });
 
