@@ -13,7 +13,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
 	volume = document.querySelector("#volume");
-	volume.innerHTML += "100%";
+	volume.innerHTML = "100%";
 	
 });
 
